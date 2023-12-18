@@ -33,18 +33,15 @@ bin/%.o: src/%.c
 #	@cmake $(MLXPATH) -B $(MLXPATH)/build
 #	@$(MAKE) -C $(MLXPATH)/build -j4
 
-$(LIBFTPATH)$(LIBFT):
-	@$(MAKE) -C $(LIBFTPATH)
-	@$(MAKE) -C $(LIBFTPATH) bonus
+# $(LIBFTPATH)$(LIBFT):
+#	@$(MAKE) -C $(LIBFTPATH)
+#	@$(MAKE) -C $(LIBFTPATH) bonus
 
 clean:
 	@rm -rf bin/
-	@$(MAKE) -C $(LIBFTPATH) clean
 
 fclean: clean
-	@rm $(NAME)
-#	@rm -rf $(MLXPATH)/build
-	@$(MAKE) -C $(LIBFTPATH) fclean
+	@rm -rf $(NAME)
 
 bonus: all
 
